@@ -33,6 +33,36 @@
       <input type="radio" id="freetown" name="capital" value="freetown">
       <label for="freetown">4. Freetown</label><br>
       <input type="button" value="Submit" onclick="checkAnswer()">
+      function checkAnswer() {
+          var radios = document.getElementsByName('capital');
+
+          var goodanswer = 0;
+          var i = 0;
+          while (i < radios.length) {
+              if (radios[i].checked && radios[i].value == "easy") {
+                     goodanswer++;
+              }
+              i++;
+          }
+
+          if (!goodanswer) alert('Wrong!');
+          else alert('Correct!');
+      }
+  </script>
+</head>
+<body>
+  <h1>Test 2?</h1>
+  <img src="shutterstock-545611225-1.webp" alt="Image of Gambia">
+  <form>
+      <input type="radio" id="easy 1" name="capital" value="easy 1">
+      <label for="easy 1">1. easy 1</label><br>
+      <input type="radio" id="accra" name="capital" value="easy 2">
+      <label for="accra">2. easy 2</label><br>
+      <input type="radio" id="easy 3" name="capital" value="easy 3">
+      <label for="easy 3">3. easy 3</label><br>
+      <input type="radio" id="easy" name="capital" value="easy">
+      <label for="freetown">4. easy</label><br>
+      <input type="button" value="Submit" onclick="checkAnswer()">
   </form>
 </body>
 </html> 
