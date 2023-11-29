@@ -22,7 +22,7 @@
 </head>
 <body>
   <h1>What is the capital of Gambia?</h1>
-  <img src="path_to_your_image.jpg" alt="Image of Gambia">
+  <img src="shutterstock-545611225-1.webp" alt="Image of Gambia">
   <form>
       <input type="radio" id="dakar" name="capital" value="dakar">
       <label for="dakar">1. Dakar</label><br>
@@ -34,5 +34,37 @@
       <label for="freetown">4. Freetown</label><br>
       <input type="button" value="Submit" onclick="checkAnswer()">
   </form>
+
+
+  function checkAnswer() {
+          var radios = document.getElementsByName('capital');
+
+          var goodanswer = 0;
+          var i = 0;
+          while (i < radios.length) {
+              if (radios[i].checked && radios[i].value == "lol 1") {
+                     goodanswer++;
+              }
+              i++;
+          }
+
+          if (!goodanswer) alert('Wrong!');
+          else alert('Correct!');
+      }
+  </script>
+</head>
+<body>
+  <h1>what is lol 1?</h1>
+  <img src="shutterstock-545611225-1.webp" alt="Image of Gambia">
+  <form>
+      <input type="radio" id="lol 1" name="capital" value="lol 1">
+      <label for="dakar">1. lol 1</label><br>
+      <input type="radio" id="lol 2" name="capital" value="lol 2">
+      <label for="lol 2">2. lol 2</label><br>
+      <input type="radio" id="lol 3" name="capital" value="lol 3">
+      <label for="lol 3">3. lol 3</label><br>
+      <input type="radio" id="lol 4" name="capital" value="llol 4">
+      <label for="freetown">4. lol 4</label><br>
+      <input type="button" value="Submit" onclick="checkAnswer()">
 </body>
 </html>
