@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <script>
+      function checkAnswer() {
+          var radios = document.getElementsByName('capital');
+
+          var goodanswer = 0;
+          var i = 0;
+          while (i < radios.length) {
+              if (radios[i].checked && radios[i].value == "banjul") {
+                     goodanswer++;
+              }
+              i++;
+          }
+
+          if (!goodanswer) alert('Wrong!');
+          else alert('Correct!');
+      }
+  </script>
+</head>
+<body>
+  <h1>What is the capital of Gambia?</h1>
+  <img src="path_to_your_image.jpg" alt="Image of Gambia">
+  <form>
+      <input type="radio" id="dakar" name="capital" value="dakar">
+      <label for="dakar">1. Dakar</label><br>
+      <input type="radio" id="accra" name="capital" value="accra">
+      <label for="accra">2. Accra</label><br>
+      <input type="radio" id="banjul" name="capital" value="banjul">
+      <label for="banjul">3. Banjul</label><br>
+      <input type="radio" id="freetown" name="capital" value="freetown">
+      <label for="freetown">4. Freetown</label><br>
+      <input type="button" value="Submit" onclick="checkAnswer()">
+  </form>
+</body>
+</html> 
