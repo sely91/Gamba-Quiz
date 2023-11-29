@@ -5,6 +5,7 @@
   <script>
       function checkAnswer() {
           var radios = document.getElementsByName('capital');
+          var radios2 = document.getElementsByName('q2');
 
           var goodanswer = 0;
           var i = 0;
@@ -15,15 +16,24 @@
               i++;
           }
 
-          if (!goodanswer) alert('Wrong!');
-          else alert('Correct!');
+          i = 0;
+          while (i < radios2.length) {
+              if (radios2[i].checked && radios2[i].value == "correct") {
+                     goodanswer++;
+              }
+              i++;
+          }
+
+          alert('You got '+goodanswer+' questions correctly!');
+          
       }
   </script>
 </head>
 <body>
-  <h1>What is the capital of Gambia?</h1>
-  <img src="shutterstock-545611225-1.webp" alt="Image of Gambia">
+  
   <form>
+      <h1>What is the capital of Gambia?</h1>
+      <img src="path_to_your_image.jpg" alt="Image of Gambia">
       <input type="radio" id="dakar" name="capital" value="dakar">
       <label for="dakar">1. Dakar</label><br>
       <input type="radio" id="accra" name="capital" value="accra">
@@ -31,6 +41,18 @@
       <input type="radio" id="banjul" name="capital" value="banjul">
       <label for="banjul">3. Banjul</label><br>
       <input type="radio" id="freetown" name="capital" value="freetown">
+      <label for="freetown">4. Freetown</label><br>
+
+
+      <h1>What is the capital of Gambia?</h1>
+      <img src="path_to_your_image.jpg" alt="Image of Gambia">
+      <input type="radio" id="dakar" name="q2" value="dakar">
+      <label for="dakar">1. Dakar</label><br>
+      <input type="radio" id="accra" name="q2" value="accra">
+      <label for="accra">2. Accra</label><br>
+      <input type="radio" id="banjul" name="q2" value="correct">
+      <label for="banjul">3. Banjul</label><br>
+      <input type="radio" id="freetown" name="q2" value="freetown">
       <label for="freetown">4. Freetown</label><br>
       <input type="button" value="Submit" onclick="checkAnswer()">
   </form>
