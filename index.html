@@ -38,6 +38,15 @@ font-family: sans-serif
               i++;
           }
 
+         i = 0;
+          while (i < radios3.length) {
+              if (radios3[i].checked && radios2[i].value == "Red, Blue and Green") {
+                     goodanswer++;
+              }
+              i++;
+          }
+
+
           alert('You got '+goodanswer+' questions correctly!');
           
       }
@@ -58,6 +67,18 @@ font-family: sans-serif
       <input type="radio" id="freetown" name="capital" value="freetown">
       <label for="freetown">4. Freetown</label><br>
 
+       <h1>What are the colors of the Gambia Flag?</h1>
+      <img src="shutterstock-545611225-1.webp" alt="Image of Gambia">
+      <br>
+      <input type="radio" id="Red, Blue and Green" name="capital" value="Red, Blue and Green">
+      <label for="Red, Blue and Green">1. Red, Blue and Green</label><br>
+      <input type="radio" id="White, Green and Blue" name="capital" value="White, Green and Blue">
+      <label for="White, Green and Blue">2. White, Green and Blue</label><br>
+      <input type="radio" id="Green and Red" name="capital" value="Green and Red">
+      <label for="Green and Red">3. Green and Red</label><br>
+      <input type="radio" id="Blue and Green" name="capital" value="Blue and Green">
+      <label for="Blue and Green">4. Blue and Green</label><br>
+
 
       <h1>What is the average family size in the Gambia??</h1>
       <img src="download.jpg" alt="Image of Gambia">
@@ -71,6 +92,8 @@ font-family: sans-serif
       <input type="radio" id="9-12 people" name="q2" value="9-12 people">
       <label for="9-12 people">4. 9-12 people</label><br>
       <input type="button" value="Submit" onclick="checkAnswer()">
+    
   </form>
+  
 </body>
 </html> 
